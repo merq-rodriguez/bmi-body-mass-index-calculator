@@ -1,0 +1,96 @@
+$primary: rgba(39, 170, 142, 0.493);
+$secondary: rgba(22, 180, 114, 0.473);
+
+.card {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+
+h5,
+p {
+  color: rgb(255, 255, 255);
+}
+
+.background-item {
+  background-color: $primary;
+  border-radius: 20px;
+}
+
+.higth-box {
+  height: 150px;
+}
+
+.genre {
+  color: white;
+  font-size: 40px;
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary;
+    border-radius: 20px;
+  }
+}
+
+.number-higth {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: -25px;
+  color: white;
+}
+
+.cm {
+  font-size: 16px;
+  font-weight: 800;
+  margin-left: -10px;
+}
+
+.custom-range {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: rgb(12, 184, 89);
+  border-radius: 30px;
+}
+
+.operations {
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 20px;
+  background-color: rgba(24, 226, 182, 0.692);
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.btn-color {
+  margin: 15px;
+  background-color: $primary;
+  border-radius: 25px;
+  border-color: $primary;
+  box-shadow: 20%;
+}
+
+.genre-selected {
+  background-color: rgba(56, 201, 133, 0.705);
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: rgb(255, 255, 255);
+  box-shadow: -1px 0px 18px -2px rgba(69, 216, 191, 0.342);
+}

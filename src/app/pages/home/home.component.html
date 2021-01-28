@@ -1,0 +1,95 @@
+<div class="row center-items">
+  <div class="col-md-3">
+    <div class="card mt-5">
+      <h5 class="text-center">Calculadora de peso corporal</h5>
+
+      <div class="row mt-4">
+        <div class="col-6" *ngFor="let genre of genresList">
+          <div
+            [ngClass]="{ 'genre-selected': genre.name === person.genre }"
+            class="background-item higth-box genre-selected"
+            (click)="setGenre(genre.id)"
+          >
+            <div class="container-box">
+              <i [ngClass]="genre.icon"></i>
+              <p>{{ genre.name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="background-item higth-box">
+            <div class="container-box">
+              <p>Altura</p>
+              <div class="number-higth">
+                {{ person.higth }} <span class="cm"> cm</span>
+              </div>
+              <input
+                type="range"
+                class="custom-range"
+                [(ngModel)]="person.higth"
+                min="120"
+                max="220"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-6">
+          <div class="background-item higth-box">
+            <div class="container-box">
+              <p>Peso</p>
+              <div class="number-higth">{{ person.weight }}</div>
+              <div>
+                <i
+                  class="fas fa-minus operations"
+                  (mousedown)="substractWeight($event)"
+                  (mouseup)="substractWeight($event)"
+                  (click)="substractWeight($event)"
+                ></i>
+                <i
+                  class="fas fa-plus operations"
+                  (mousedown)="sumWeight($event)"
+                  (mouseup)="sumWeight($event)"
+                  (click)="sumWeight($event)"
+
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="background-item higth-box">
+            <div class="container-box">
+              <p>Edad</p>
+              <div class="number-higth">{{ person.age }}</div>
+              <div>
+                <i
+                  class="fas fa-minus operations"
+                  (click)="substractHigth($event)"
+                  (mouseup)="substractHigth($event)"
+                  (mousedown)="substractHigth($event)"
+                ></i>
+                <i class="fas fa-plus operations"
+                  (click)="sumHigth($event)"
+                  (mousedown)="sumHigth($event)"
+                  (mouseup)="sumHigth($event)"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button
+          class="btn btn-primary btn-block btn-lg btn-color"
+          (click)="calculate()"
+        >
+          Calcular
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

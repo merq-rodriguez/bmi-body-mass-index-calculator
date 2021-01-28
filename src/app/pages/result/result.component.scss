@@ -1,0 +1,71 @@
+$primary:  rgba(39, 170, 142, 0.493);
+$secondary: rgba(22, 180, 114, 0.473);
+
+
+.card {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+
+h5, p{
+  color: rgb(255, 255, 255);
+}
+
+.background-item {
+  background-color: $primary;
+  border-radius: 20px;
+}
+
+.container-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.higth-box {
+  height: 100%;
+}
+
+.center-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.result {
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.number-result{
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
+.description-text{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+
+.btn-color {
+  margin: 15px;
+  background-color: $primary;
+  border-radius: 25px;
+  border-color: $primary;
+  box-shadow: 20%;
+}
